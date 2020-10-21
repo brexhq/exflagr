@@ -31,7 +31,7 @@ defmodule Flagr.Api.Export do
     |> url("/export/eval_cache/json")
     |> Enum.into([])
     |> (&Connection.request(connection, &1)).()
-    |> decode(%Flagr.Model.Object{})
+    |> decode(%{})
   end
 
   @doc """
@@ -41,7 +41,7 @@ defmodule Flagr.Api.Export do
 
   - connection (Flagr.Connection): Connection to server
   - opts (KeywordList): [optional] Optional parameters
-    - :exclude_snapshots (boolean()): export without snapshots data - useful for smaller db without snapshots 
+    - :exclude_snapshots (boolean()): export without snapshots data - useful for smaller db without snapshots
 
   ## Returns
 

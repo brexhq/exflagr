@@ -4,7 +4,7 @@ defmodule Flagr.Mixfile do
   def project do
     [app: :flagr,
      version: "0.1.0",
-     elixir: "~> 1.4",
+     elixir: "~> 1.8",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps()]
@@ -30,7 +30,8 @@ defmodule Flagr.Mixfile do
   defp deps do
     [
       {:tesla, "~> 0.8"},
-      {:poison, ">= 1.0.0"}
+      {:poison, ">= 1.0.0"},
+      {:ex_doc, "~> 0.19.0", only: :dev, runtime: false}
     ]
   end
 end

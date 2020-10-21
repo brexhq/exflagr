@@ -143,7 +143,7 @@ defmodule Flagr.Api.Flag do
     |> url("/flags/entity_types")
     |> Enum.into([])
     |> (&Connection.request(connection, &1)).()
-    |> decode([%Flagr.Model.String{}])
+    |> decode([%{}])
   end
 
   @doc """
